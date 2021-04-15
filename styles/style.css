@@ -1,0 +1,237 @@
+/*  Root  */
+
+:root {
+
+/* Colors */
+
+/* Primary */
+
+--primary-color-red: hsl(0, 100%, 74%);
+--primary-color-green: hsl(154, 59%, 51%);
+
+/* Accent */
+
+--primary-color-blue: hsl(248, 32%, 49%);
+
+/* Neutral */
+
+--primary-color-dark-blue: hsl(249, 10%, 26%);
+--primary-color-grayish-blue: hsl(246, 25%, 77%);
+
+/* Typography */
+
+/* Body */
+
+--primary-font-size: 16px;
+
+/* Font */
+
+--primary-font-family: 'Poppins', sans-serif;
+--regular-font-weight: 400;
+--medium-font-weight: 500;
+--semi-bold-font-weight: 600;
+--bold-font-weight: 700;
+
+}
+
+/*  End of Root  */
+
+/*  Base  */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/*  End of Base  */
+
+
+/*  Main  */
+
+body {
+    background: url(/images/bg-intro-mobile.png) var(--primary-color-red) center center;
+    background-repeat: no-repeat;
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
+}
+
+.intro {
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-content {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.left-content h2 {
+    color: white;
+    font-size: 1.5rem;
+    padding: 3rem 1rem 1rem;
+}
+
+.left-content p {
+    color: rgb(233, 232, 232);
+    padding: 1rem;
+}
+
+.right-content {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.box-container {
+    margin-bottom: 2rem;
+    padding: 1rem 4rem;
+    background: var(--primary-color-blue);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 7px hsla(249, 10%, 26%, 0.4);
+}
+
+.main-form {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 7px hsla(249, 10%, 26%, 0.4);
+}
+
+.form-field {
+    position: relative;
+    margin: 15px 0;
+}
+
+.form-field .error-icon, .form-field .error-text {
+    display: none;
+}
+
+.form-field.error .error-icon {
+    display: block;
+    position: absolute;
+    top: 20%;
+    right: 10px;
+}
+
+.form-field.error .error-text {
+    display: block;
+    color: var(--primary-color-red);
+}
+
+.form-field.error input {
+    border: 1px solid var(--primary-color-red);
+}
+
+.form-field.error input[type=email] {
+    color: var(--primary-color-red);
+}
+
+.form-field.success input {
+    border: 1px solid var(--primary-color-green);
+}
+
+input {
+    width: 100%;
+    border: 1px solid grey;
+    padding: 10px 15px;
+    font-weight: var(--bold-font-weight);
+    font-size: var(--primary-font-size);
+    font-family: var(--primary-font-size);
+    border-radius: 5px;
+}
+
+input[type=text], input[type=email], [type=password] {
+    color: grey;
+    font-size: var(--primary-font-size);
+    font-weight: var(--semi-bold-font-weight);
+}
+
+input[type=submit] {
+    color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-weight: var(--semi-bold-font-weight);
+    margin: -15px 0 10px;
+    background-color: var(--primary-color-green);
+}
+
+input[type=submit]:hover {
+    background-color: hsl(154, 86%, 60%);
+    cursor: pointer;
+}
+
+
+form:last-child {
+    font-size: 12px;
+    text-align: center;
+    padding: 20px 20px ;
+    font-size: smaller;
+    color: gray;
+}
+
+.terms {
+    color: red;
+    text-decoration: none;
+}
+
+footer {
+    padding: 1rem 0;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 720px) {
+    
+    body {
+        background: url(/images/bg-intro-desktop.png) var(--primary-color-red) center center;
+    }
+
+    .intro {
+        flex-direction: row;
+    }
+    
+    .left-content {
+        padding-top: clamp(3rem, 7vw, 6rem);;
+        text-align: left;
+        max-width: 40%;
+    }
+
+    .left-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .right-content {
+        padding: 1rem 0 0 2rem;
+    }
+
+    .box-container {
+        padding: 1rem 1rem;    
+    }
+
+    form {
+        padding: clamp(3rem, 3.5vw, 4rem);
+    }
+
+    .form-field {
+        margin: 20px 0;
+    }
+
+    .error-text {
+        float: right;
+    }
+
+}
+
+
+/*  End of Main  */
