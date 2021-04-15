@@ -54,7 +54,7 @@ html {
 /*  Main  */
 
 body {
-    background: url(/images/bg-intro-mobile.png) var(--primary-color-red) center center;
+    background: url(../images/bg-intro-mobile.png) var(--primary-color-red) center center;
     background-repeat: no-repeat;
     font-family: var(--primary-font-family);
     font-size: var(--primary-font-size);
@@ -194,7 +194,7 @@ footer {
 @media screen and (min-width: 720px) {
     
     body {
-        background: url(/images/bg-intro-desktop.png) var(--primary-color-red) center center;
+        background: url(../images/bg-intro-desktop.png) var(--primary-color-red) center center;
     }
 
     .intro {
